@@ -2,11 +2,11 @@
 #include "../headers/swp_template.hpp"
 
 // deps
-#include <sdk/plugin/plugin_emplace.hpp>
+#include <swpsdk/plugin/plugin_emplace.hpp>
 
-auto sdk::plugin::emplace(void)->sdk::plugin::info* {
-  return new sdk::plugin::info{
-    .game_version = semver::version(),
+auto swpsdk::plugin::emplace(void)->swpsdk::plugin::info* {
+  return new swpsdk::plugin::info{
+    .game_version = game::version{1, 4, 2, 3},
     .plugin_version = semver::version(),
     .instance = &swp_template::instance()
   };
