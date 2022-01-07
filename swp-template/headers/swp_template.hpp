@@ -5,7 +5,7 @@
 class swp_template final : public sdk::plugin::base<swp_template>
 {
 public:
-  virtual auto main(void) const -> void 
+  auto main(void) const -> void override
   {
     spdlog::info("hello, world!");
   }
