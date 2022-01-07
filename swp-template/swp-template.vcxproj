@@ -181,7 +181,7 @@
     <ClInclude Include="headers\swp_template.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\emplace.cpp" />
+    <ClCompile Include="sources\attach.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

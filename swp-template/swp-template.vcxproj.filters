@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\emplace.cpp">
+    <ClCompile Include="sources\attach.cpp">
       <Filter>sources</Filter>
     </ClCompile>
   </ItemGroup>
