@@ -1,12 +1,12 @@
 #pragma once
 
-#include <swpsdk/plugin/plugin_base.hpp>
+#include <swpsdk/plugin/base.hpp>
 
-class swp_template final : public swpsdk::plugin::base<swp_template>
+namespace swp_template
 {
-public:
-  auto main(void) const -> void override
+  class plugin final : public swpsdk::plugin::base<plugin>
   {
-    spdlog::info("hello, world!");
-  }
-};
+  public:
+    auto main(void) const -> void override;
+  };
+}
