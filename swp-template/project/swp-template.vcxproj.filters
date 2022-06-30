@@ -18,12 +18,18 @@
     <ClInclude Include="..\headers\swp_template.hpp">
       <Filter>headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\headers\pch.hpp">
+      <Filter>headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\sources\attach.cpp">
       <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="..\sources\swp_template.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\pch.cpp">
       <Filter>sources</Filter>
     </ClCompile>
   </ItemGroup>

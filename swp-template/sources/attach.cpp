@@ -1,8 +1,5 @@
 // local
-#include "../headers/swp_template.hpp"
-
-// deps
-#include <swpsdk/plugin/attach.hpp>
+#include "swp_template.hpp"
 
 auto swpsdk::plugin::attach(void)->swpsdk::plugin::info* {
   return new swpsdk::plugin::info{

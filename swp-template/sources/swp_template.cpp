@@ -1,5 +1,5 @@
 // local
-#include "../headers/swp_template.hpp"
+#include "swp_template.hpp"
 
 namespace swp_template
 {
