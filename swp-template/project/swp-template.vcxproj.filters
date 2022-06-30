@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\swp_template.hpp">
+    <ClInclude Include="..\headers\swp_template.hpp">
       <Filter>headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\attach.cpp">
+    <ClCompile Include="..\sources\attach.cpp">
       <Filter>sources</Filter>
     </ClCompile>
-    <ClCompile Include="sources\swp_template.cpp">
+    <ClCompile Include="..\sources\swp_template.cpp">
       <Filter>sources</Filter>
     </ClCompile>
   </ItemGroup>

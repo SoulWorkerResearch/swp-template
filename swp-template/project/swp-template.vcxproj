@@ -178,11 +178,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="headers\swp_template.hpp" />
+    <ClInclude Include="..\headers\swp_template.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\attach.cpp" />
-    <ClCompile Include="sources\swp_template.cpp" />
+    <ClCompile Include="..\sources\attach.cpp" />
+    <ClCompile Include="..\sources\swp_template.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\swp-sdk\project\swp-sdk.vcxproj">
+      <Project>{4461d076-5003-408e-876f-608dffee6b4b}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
