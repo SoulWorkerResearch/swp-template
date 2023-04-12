@@ -101,6 +101,22 @@
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnableManifest>true</VcpkgEnableManifest>
   </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgUseMD>true</VcpkgUseMD>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgUseMD>true</VcpkgUseMD>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgUseMD>true</VcpkgUseMD>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgUseMD>true</VcpkgUseMD>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -109,11 +125,13 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(SolutionDir)swp-sdk\headers;$(ProjectDir)..\headers\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)swp-sdk\swp-sdk\headers;$(ProjectDir)..\headers\</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
       <ForcedIncludeFiles>%(PrecompiledHeaderFile)</ForcedIncludeFiles>
+      <EnableModules>false</EnableModules>
+      <BuildStlModules>false</BuildStlModules>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -131,11 +149,13 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(SolutionDir)swp-sdk\headers;$(ProjectDir)..\headers\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)swp-sdk\swp-sdk\headers;$(ProjectDir)..\headers\</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
       <ForcedIncludeFiles>%(PrecompiledHeaderFile)</ForcedIncludeFiles>
+      <EnableModules>false</EnableModules>
+      <BuildStlModules>false</BuildStlModules>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -153,11 +173,13 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(SolutionDir)swp-sdk\headers;$(ProjectDir)..\headers\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)swp-sdk\swp-sdk\headers;$(ProjectDir)..\headers\</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
       <ForcedIncludeFiles>%(PrecompiledHeaderFile)</ForcedIncludeFiles>
+      <EnableModules>false</EnableModules>
+      <BuildStlModules>false</BuildStlModules>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -175,11 +197,13 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(SolutionDir)swp-sdk\headers;$(ProjectDir)..\headers\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)swp-sdk\swp-sdk\headers;$(ProjectDir)..\headers\</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
       <ForcedIncludeFiles>%(PrecompiledHeaderFile)</ForcedIncludeFiles>
+      <EnableModules>false</EnableModules>
+      <BuildStlModules>false</BuildStlModules>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -202,11 +226,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\sources\swp_template.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\swp-sdk\project\swp-sdk.vcxproj">
-      <Project>{4461d076-5003-408e-876f-608dffee6b4b}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -10,6 +10,8 @@
 // add headers that you want to pre-compile here
 
 #include <swpsdk/plugin/base.hpp>
-#include <swpsdk/plugin/attach.hpp>
+#include <swpsdk/plugin/get_info.hpp>
+
+#include <spdlog/spdlog.h>
 
 #endif //PCH_H
